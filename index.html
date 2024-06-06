@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify clone</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+
+    <!--font awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-900">
+    <!--start navigation bar-->
+    <nav class="flex justify-between text-white items-center py-3 px-10">
+        <img src="./covers/spotify-logo.png" class="w-30 h-10">
+
+        <ul class="flex space-x-10">
+            <li class="cursor-pointer hover:text-green-600">Home</li>
+            <li class="cursor-pointer hover:text-green-600">Trending</li>
+            <li class="cursor-pointer hover:text-green-600">Popular</li>
+            <li class="cursor-pointer hover:text-green-600">New Song</li>
+        </ul>
+
+        <button class="border-2 border-white rounded-md py-1 px-5 cursor-pointer hover:text-green-600 ">Downloads</button>
+    </nav>
+    <!--end of navigation bar-->
+
+    <!--start container-->
+    <div class="container max-w-screen-xl  mx-auto px-5 flex flex-col items-center justify-center mt-20">
+
+        <!--start songlist-->
+        <div class="songList ">
+
+            <!--start song item container-->
+            <div class="songItemContainer grid grid-cols-4 gap-10 text-sm"> 
+                
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="1" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="2" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="3" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="4" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="5" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="6" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="7" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem w-60 h-80 bg-transparent text-white border border-blue-950 rounded-lg overflow-hidden">
+                    <img class="w-60 h-64">
+                    <span class="songName py-2 px-3 flex"></span>
+                    <span class="songListPlay">
+                        <span class="timestamp px-3">
+                            05:34
+                            <i id="8" class="songItemPlay fa-regular fa-circle-play"></i>
+                        </span>
+                    </span>
+                </div>
+
+            </div>      <!--end of song item container-->
+        </div>      <!--end of songlist--> 
+        <div class="songBanner"></div>
+    </div>
+    <!--end of container-->
+
+    <!--start bottom-->
+    <div class="bottom max-w-screen-xl  mx-auto px-5 flex flex-col items-center justify-center mt-20 text-white ">
+
+        <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0" class="w-full">
+        <div class="icons my-5">
+            <i class="fa-solid fa-3x fa-backward" id="previous" ></i>   
+            <i class="fa-regular fa-3x fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-3x fa-forward" id="next"></i>
+        </div>
+
+    </div>
+    <!--end of bottom-->
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
